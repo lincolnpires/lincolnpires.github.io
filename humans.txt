@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Lincoln Pires, developer <@LincolnPiress>
 
 # THANKS
 
-    <name>
+    someone
 
 # TECHNOLOGY COLOPHON
 
