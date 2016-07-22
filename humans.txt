@@ -7,7 +7,7 @@
 
 # THANKS
 
-    someone
+    me
 
 # TECHNOLOGY COLOPHON
 
