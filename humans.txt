@@ -1,15 +1,5 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
-# TEAM
-
-    Lincoln Pires, developer <@LincolnPiress>
-
-# THANKS
-
-    me
-
-# TECHNOLOGY COLOPHON
-
-    HTML5, CSS3
-    jQuery, Modernizr
+Lincoln Pires - Developer - @LincolnPiress
+    Based on the design of provided by Xiao: https://themes.3rdwavemedia.com/website-templates/orbit-free-resume-cv-template-for-developers/
