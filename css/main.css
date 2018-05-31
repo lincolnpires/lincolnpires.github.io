@@ -144,7 +144,9 @@ p {
 
 .sidebar-wrapper .profile {
   margin-bottom: 15px;
-  border-radius: 50px;
+  width: 150px;
+  height: 150px;
+  /* border-radius: 50px; */
 }
 
 .sidebar-wrapper .contact-list .fa {
