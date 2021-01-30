@@ -3,13 +3,19 @@
 
 # TEAM
 
-    Lincoln Pires, developer <@LincolnPiress>
+    myself <@LincolnPiress>
 
 # THANKS
 
-    someone
+    HTML5Boilerplate for the template (+ retired Initializr)
+    Netlify for the free hosting
+    Community for awesome open source tooling
 
 # TECHNOLOGY COLOPHON
 
+    HTML5Boilerplate
     HTML5, CSS3
-    jQuery, Modernizr
+    Modernizr
+    Parcel
+    React (Ecosystem)
+    Ghost
