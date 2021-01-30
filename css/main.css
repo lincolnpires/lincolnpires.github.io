@@ -100,18 +100,18 @@ body {
 /* Orange Theme */
 
 .header-container {
-  border-bottom: 20px solid #e44d26;
+  border-bottom: 20px solid #3A276E;
 }
 
 .footer-container,
 .main aside {
-  border-top: 20px solid #e44d26;
+  border-top: 20px solid #3A276E;
 }
 
 .header-container,
 .footer-container,
 .main aside {
-  background: #f16529;
+  background: #5F40B3;
 }
 
 .title {
@@ -136,7 +136,7 @@ nav a {
   font-weight: bold;
 
   color: white;
-  background: #e44d26;
+  background: #3A276E;
 }
 
 nav a:hover,

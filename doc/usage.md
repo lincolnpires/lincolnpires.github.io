@@ -59,8 +59,7 @@ What follows is a general overview of each major part and how to use them.
 ### css
 
 This directory should contain all your project's CSS files. It includes some
-initial CSS to help get you started from a solid foundation. [About the
-CSS](css.md).
+initial CSS to help get you started from a solid foundation. 
 
 ### doc
 
@@ -71,7 +70,7 @@ as the location and basis for your own project's documentation.
 
 This directory should contain all your project's JS files. Libraries, plugins,
 and custom code can all be included here. It includes some initial JS to help
-get you started. [About the JavaScript](js.md).
+get you started.
 
 ### .htaccess
 
