@@ -11,6 +11,8 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+/*! Orbit 1.0 | Xiaoying Riley - @3rdwave_themes | CCA 3.0 License | http://themes.3rdwavemedia.com/ */
+
 html {
   color: #222;
   font-size: 1em;
@@ -381,14 +383,12 @@ nav a:hover {
   img {
     page-break-inside: avoid;
   }
-
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
-
   h2,
   h3 {
     page-break-after: avoid;
