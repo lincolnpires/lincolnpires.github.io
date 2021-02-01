@@ -42,9 +42,22 @@ function App() {
   );
 }
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.querySelector('#root')
 );
+
+// Cloudflare Web Analytics:
+if (!module.hot) {
+  const beacon = {
+    token: process.env.CF_TOKEN
+  };
+  const cfAnalyticsTag = document.createElement('script');
+  cfAnalyticsTag.defer = true;
+  cfAnalyticsTag.setAttribute("data-cf-beacon", JSON.stringify(beacon));
+  cfAnalyticsTag.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+
+  document.body.append(cfAnalyticsTag);
+}

@@ -1,8 +1,39 @@
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+/* =============================================================================
+Author's custom styles
+============================================================================= */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.pure-g [class *= "pure-u"] {
+  font-family: 'Fira Mono', Consolas, 'Liberation Mono', Courier, monospace;
+}
+
+.text-center {
+  text-align: center;
+}
+
 body {
-  font: 16px/26px Helvetica, Helvetica Neue, Arial;
+  font-size: 1rem;
+  font-family: 'Fira Mono', Consolas, 'Liberation Mono', Courier, monospace;
+  color: #fffafa;
+  background: #171620;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ~ ≥ 568px */
+@media screen and (min-width: 35.5em) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
 }
 
 .wrapper {
@@ -10,111 +41,106 @@ body {
   margin: 0 5%;
 }
 
-/* Orange Theme */
-
-.header-container {
-  border-bottom: 20px solid #3A276E;
+/* ~ ≥ 1280px - max width */
+@media screen and (min-width: 80em) {
+  .wrapper {
+    width: 72rem;
+    margin: 0 auto; /* 10% for margins */
+  }
 }
 
-.footer-container,
-.main aside {
-  border-top: 20px solid #3A276E;
+.title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-container {
+  border-top: 6px solid #5F40B3;
+  border-bottom: 2px solid #5F40B3;
+  text-align: center;
 }
 
 .header-container,
-.footer-container,
-.main aside {
-  background: #5F40B3;
+.aside-container {
+  background: #3A276E;
 }
 
-.title {
-  color: white;
+.subscribe-container,
+.aside-container {
+  border-top: 6px solid #5F40B3;
 }
 
-/* MOBILE */
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.aside-container {
+  padding: 0 5% 10px;
 }
 
-nav a {
+.footer-container .wrapper {
+  padding: 1rem 0;
+}
+
+.subscribe-container {
+  margin-bottom: 3rem;
+  border-bottom: #3c3c3c 1px solid;
+}
+
+.subscribe-container > div {
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  max-width: 568px;
+}
+
+.navbar a {
   display: block;
-  margin-bottom: 10px;
-  padding: 15px 0;
+  margin-bottom: .75rem;
+  padding: 1rem 0;
 
   text-align: center;
   text-decoration: none;
   font-weight: bold;
 
   color: white;
+  background: #5F40B3;
+}
+
+.navbar a:hover,
+.navbar a:visited {
+  color: white;
+}
+
+.navbar a:hover {
   background: #3A276E;
 }
 
-nav a:hover,
-nav a:visited {
-  color: white;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.main {
-  padding: 30px 0;
-}
-
-.main article h1 {
-  font-size: 2em;
-}
-
-.main aside {
-  color: white;
-  padding: 0 5% 10px;
-}
-
-.footer-container footer {
-  color: white;
-  padding: 20px 0;
-}
-
-/* INTERMEDIATE */
-@media only screen and (min-width: 480px) {
-
-  nav a {
-    float: left;
+/* ~ ≥ 568px */
+@media screen and (min-width: 35.5em) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar a {
     width: 27%;
     margin: 0 1.7%;
     padding: 25px 2%;
   }
 
-  nav li:first-child a {
+  .navbar a:first-child {
     margin-left: 0;
   }
 
-  nav li:last-child a {
+  .navbar a:last-child {
     margin-right: 0;
   }
 }
 
-/* WIDE */
-@media only screen and (min-width: 768px) {
+.main {
+  padding: 1.5rem 0;
+}
 
-  .header-container,
-  .main aside {
-    -webkit-box-shadow: 0 5px 10px #aaa;
-    -moz-box-shadow: 0 5px 10px #aaa;
-    box-shadow: 0 5px 10px #aaa;
-  }
+/* ~ ≥ 768px */
+@media screen and (min-width: 48em)  {
 
-  .title {
-    float: left;
-  }
-
-  nav {
-    float: right;
-    width: 38%;
+  .main {
+    padding: 2rem 0;
   }
 
   .main .root {
@@ -122,17 +148,7 @@ nav a:hover {
     width: 57%;
   }
 
-  .main aside {
-    float: right;
-    width: 28%;
-  }
 }
 
-/* Maximal Width */
-@media only screen and (min-width: 1140px) {
-
-  .wrapper {
-    width: 1026px; /* 1140px - 10% for margins */
-    margin: 0 auto;
-  }
-}
+/* ~ ≥ 1024px */
+@media screen and (min-width: 64em) {}

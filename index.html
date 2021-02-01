@@ -17,85 +17,96 @@
   <link href="site.webmanifest" rel="manifest">
   <link href="icon.png" rel="apple-touch-icon">
   <!-- Place favicon.ico in the root directory -->
-  <link rel="stylesheet" href="node_modules/purecss/build/pure.css">
+  <link href="node_modules/purecss/build/pure.css" rel="stylesheet">
   <link href="css/html5bp.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
   <link href="css/html5bp-end.css" rel="stylesheet">
 
-  <meta content="#fafafa" name="theme-color">
+  <meta content="#fffafa" name="theme-color">
 </head>
 
 <body>
 <noscript>You'd enjoy the site better if you enable JavaScript ;)</noscript>
 
-<div class="header-container">
-  <header class="wrapper clearfix">
-    <h1 class="title">h1.title</h1>
-    <nav>
-      <ul>
-        <li><a href="#">nav ul li a</a></li>
-        <li><a href="#">nav ul li a</a></li>
-        <li><a href="#">nav ul li a</a></li>
-      </ul>
-    </nav>
-  </header>
-</div>
-
-<div class="main-container">
-  <div class="main wrapper clearfix">
-
-    <div class="root" id="root"></div>
-
-    <aside>
-      <div class="profile-container">
-        <img alt="Profile picture" class="pure-img" src="images/profile.jpg"/>
-        <h2 class="name">Lincoln Pires</h2>
-        <h3 class="tagline">Software Developer</h3>
-      </div>
-
-      <div class="languages-container container-block">
-        <h2 class="container-block-title">Languages I speak</h2>
-        <ul class="list-unstyled interests-list">
-          <li>Portuguese
-            <span class="lang-desc">(Native)</span>
-          </li>
-          <li>English
-            <span class="lang-desc">(Professional)</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="interests-container container-block">
-        <h2 class="container-block-title">Interests</h2>
-        <ul class="list-unstyled interests-list">
-          <li>Trail Running</li>
-          <li>Bass playing</li>
-          <li>Hacking</li>
-          <li>Gaming</li>
-          <li>:beer:</li>
-        </ul>
-      </div>
-    </aside>
-
+<header class="header-container">
+  <div class="wrapper clearfix">
+    <h1 class="title"><a href="/">Lincoln Pires</a></h1>
   </div>
-</div>
+</header>
 
-<div class="footer-container">
-  <footer class="wrapper">
-    <h3>things you should care</h3>
-    <h3>things you might care</h3>
-    <h3>things you won't care</h3>
-  </footer>
-</div>
+<section class="main-container">
+  <div class="main wrapper clearfix">
+    <main class="root" id="root"></main>
+  </div>
+</section>
+
+<aside class="aside-container">
+  <h3>things you should care</h3>
+  <h3>things you might care</h3>
+  <h3>things you won't care</h3>
+
+  <div class="profile-container">
+    <img alt="Profile picture" class="pure-img" src="images/profile.jpg"/>
+    <h2 class="name">Lincoln Pires</h2>
+    <h3 class="tagline">Software Developer</h3>
+  </div>
+
+  <div class="languages-container container-block">
+    <h2 class="container-block-title">Languages I speak</h2>
+    <ul class="interests-list">
+      <li>Portuguese
+        <span class="lang-desc">(Native)</span>
+      </li>
+      <li>English
+        <span class="lang-desc">(Professional)</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="interests-container container-block">
+    <h2 class="container-block-title">Interests</h2>
+    <ul class="interests-list">
+      <li>Trail Running</li>
+      <li>Bass playing</li>
+      <li>Hacking</li>
+      <li>Gaming</li>
+      <li>:beer:</li>
+    </ul>
+  </div>
+</aside>
+
+<section class="subscribe-container" id="subscribe">
+  <div class="text-center">
+    <h2>Subscribe for sweets!</h2>
+    <p>Subscribe to receive useful articles and special offers. This is very
+      occasional.</p>
+    <form action="/subscribe" method="post">
+      <label aria-label="Email">
+        <input name="email" placeholder="Your email address" required
+               type="text">
+      </label>
+      <button type="submit">SUBSCRIBE</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer-container">
+  <div class="wrapper">
+    <nav class="navbar" id="footer-nav">
+      <a href="about">About</a>
+      <a href="disclaimer">Disclaimer</a>
+      <a href="#">nav ul li a</a>
+    </nav>
+    <div class="text-center">
+      <p>© ALL RIGHTS [AND LEFTS] RESERVED.</p>
+    </div>
+  </div>
+</footer>
 
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js" type="module"></script>
 
-<!-- Cloudflare Web Analytics -->
-<script data-cf-beacon='{"token": "4d8725d60f1043fdbc22934ae8086999"}' defer
-        src='https://static.cloudflareinsights.com/beacon.min.js'></script>
-<!-- End Cloudflare Web Analytics -->
 </body>
 
 </html>
