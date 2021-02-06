@@ -1,16 +1,54 @@
 {
   "scripts": {
     "clean": "rm -rf dist && rm -rf .cache",
-    "start": "parcel src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "npm run clean -s",
+    "eslint": "eslint src/js/main.js",
+    "dev": "parcel src/index.html",
+    "start": "concurrently 'npm run eslint' 'npm run dev'",
+    "test": "npm run eslint",
+    "prebuild": "concurrently 'npm run eslint' 'npm run clean -s'",
     "build": "parcel build src/index.html",
     "postbuild": "cp -r public/* dist/"
   },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "airbnb"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "react/jsx-filename-extension": "off"
+    },
+    "ignorePatterns": [
+      "temp.js",
+      "**/vendor/*.js"
+    ]
+  },
   "dependencies": {
-    "parcel-bundler": "1.*",
     "purecss": "2.*",
     "react": "17.*",
     "react-dom": "17.*"
+  },
+  "devDependencies": {
+    "concurrently": "5.*",
+    "parcel-bundler": "1.*",
+    "eslint": "7.*",
+    "eslint-config-airbnb": "18.*",
+    "eslint-plugin-import": "2.*",
+    "eslint-plugin-jsx-a11y": "6.*",
+    "eslint-plugin-react": "7.*",
+    "eslint-plugin-react-hooks": "4.*"
   }
 }
