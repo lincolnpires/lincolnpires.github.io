@@ -1,7 +1,7 @@
 {
   "scripts": {
     "clean": "rm -rf dist && rm -rf .cache",
-    "eslint": "eslint src/js/main.js",
+    "eslint": "eslint src",
     "dev": "parcel src/index.html",
     "start": "concurrently 'npm run eslint' 'npm run dev'",
     "test": "npm run eslint",
@@ -29,7 +29,11 @@
       "react"
     ],
     "rules": {
-      "react/jsx-filename-extension": "off"
+      "react/jsx-filename-extension": "off",
+      "react/forbid-prop-types": "off",
+      "react/prop-types": "off",
+      "react/jsx-props-no-spreading": "off",
+      "no-console": "off"
     },
     "ignorePatterns": [
       "temp.js",
@@ -37,9 +41,11 @@
     ]
   },
   "dependencies": {
+    "prop-types": "^15.7.2",
     "purecss": "2.*",
     "react": "17.*",
-    "react-dom": "17.*"
+    "react-dom": "17.*",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "concurrently": "5.*",

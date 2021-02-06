@@ -152,3 +152,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ~ ≥ 1024px */
 @media screen and (min-width: 64em) {}
+
+.post-card-image {
+  width: 200px;
+}
+
+@media screen and (min-width: 48em)  {
+  .post-card-image {
+    width: 300px;
+  }
+}
+
+.post-card-content-link {
+  color: azure;
+  text-decoration: none;
+}
