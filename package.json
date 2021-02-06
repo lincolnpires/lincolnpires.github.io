@@ -1,14 +1,16 @@
 {
   "scripts": {
-    "build": "parcel build index.html",
-    "dev": "parcel index.html",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf dist && rm -rf .cache",
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "npm run clean -s",
+    "build": "parcel build src/index.html",
+    "postbuild": "cp -r public/* dist/"
   },
   "dependencies": {
-    "parcel-bundler": "^1.12.4",
-    "purecss": "^2.0.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "parcel-bundler": "1.*",
+    "purecss": "2.*",
+    "react": "17.*",
+    "react-dom": "17.*"
   }
 }
