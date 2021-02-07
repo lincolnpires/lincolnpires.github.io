@@ -10,7 +10,7 @@ function PostCard({
       {feature_image && (
         <a className="post-card-image-link" href={url}>
           <img
-            className="post-card-image"
+            className="post-card-image pure-img"
             sizes="(max-width: 768px) 100px, 150px"
             loading="lazy"
             src={feature_image}
@@ -28,7 +28,15 @@ function PostCard({
           </section>
         </a>
         <footer className="post-card-meta">
-          <time dateTime={published_at}>{published_at}</time>
+          <small>
+            Published:&nbsp;
+            <time dateTime={published_at}>
+              {new Intl.DateTimeFormat([], {
+                dateStyle: 'medium',
+                timeStyle: 'medium',
+              }).format(new Date(published_at))}
+            </time>
+          </small>
         </footer>
       </div>
     </article>
