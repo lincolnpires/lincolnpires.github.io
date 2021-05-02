@@ -34,6 +34,7 @@ node_modules
 .node_repl_history
 
 .cache/
+.parcel-cache/
 .idea/
 .vs
 .DS_Store

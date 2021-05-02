@@ -7,7 +7,9 @@
     "test": "npm run eslint",
     "prebuild": "concurrently 'npm run eslint' 'npm run clean -s'",
     "build": "parcel build src/index.html",
-    "postbuild": "cp -r public/* dist/"
+    "postbuild": "cp -r public/* dist/",
+    "prepreview": "npm run build -s",
+    "preview": "surge --project dist --domain https://lincolnpires.surge.sh"
   },
   "eslintConfig": {
     "env": {
@@ -48,13 +50,16 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.0.0-beta.2",
+    "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
     "concurrently": "5.*",
-    "parcel-bundler": "1.*",
     "eslint": "7.*",
     "eslint-config-airbnb": "18.*",
     "eslint-plugin-import": "2.*",
     "eslint-plugin-jsx-a11y": "6.*",
     "eslint-plugin-react": "7.*",
-    "eslint-plugin-react-hooks": "4.*"
+    "eslint-plugin-react-hooks": "4.*",
+    "parcel": "*",
+    "surge": "^0.23.0"
   }
 }
